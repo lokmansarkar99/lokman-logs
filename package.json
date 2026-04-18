@@ -9,9 +9,9 @@
   "scripts": {
     "predev": "node -e \"const fs=require('fs'); if(fs.existsSync('./public/sitemap.xml')) fs.unlinkSync('./public/sitemap.xml');\"",
     "prebuild": "node -e \"const fs=require('fs'); if(fs.existsSync('./public/sitemap.xml')) fs.unlinkSync('./public/sitemap.xml');\"",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node api.js && next dev",
+    "build": "node api.js && next build",
+    "start": "node api.js && next start",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "lint": "next lint"
   },
